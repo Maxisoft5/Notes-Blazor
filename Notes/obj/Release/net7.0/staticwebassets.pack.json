@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Web.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\404.html",
+      "PackagePath": "staticwebassets\\404.html"
+    },
+    {
       "Id": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
@@ -61,8 +65,16 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
       "Id": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
     },
     {
       "Id": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\js\\bootstrap.bundle.js",

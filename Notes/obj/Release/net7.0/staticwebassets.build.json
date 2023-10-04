@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TDh0lBypUsL8GgCZ9kCaI9DlQiO/7/y6s8KKbhy+S+k=",
+  "Hash": "MoVBtR1l24wSzGUuUpCGg1tYTGTO4UXns5oE+mHvZNI=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -612,6 +612,23 @@
       "OriginalItemSpec": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\Web.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\404.html",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "404.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\404.html"
+    },
+    {
       "Identity": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "Web",
       "SourceType": "Discovered",
@@ -850,6 +867,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\favicon.ico",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
       "Identity": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\favicon.png",
       "SourceId": "Web",
       "SourceType": "Discovered",
@@ -865,6 +899,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\index.html",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
       "Identity": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\wwwroot\\js\\bootstrap.bundle.js",
