@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kQEKS+RBy0gSdQZTJiaY2nm7Wpvw34rqTha3ojCS4Pbo4XAawi+1HZebiB/07W47jq2oP9jJ0ojjV7NVZsg5ig==",
+  "dgSpecHash": "oqWu4Oty6LwA5MCTcm9IO5T4juNP2bp4Nj19QmtbabqbukTRdQBls4hE6mBGx4isFRLJ3RRctlJ2yKEqX4IlXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maksym\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",

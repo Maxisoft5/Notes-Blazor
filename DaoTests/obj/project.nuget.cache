@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cfPUzS4zEdcGTXmBGiveAnkgJBv3Wht90SOxP/0vikfdMcIO1pN6k5o/AXZ6daTs4Mc9VhcC3+5Gk82R8z03Fw==",
+  "dgSpecHash": "iw6j9z7XzjJPa/7uM3j58Njp269QbvWLth8Xtuy6TxTen7YYn/z7QgIH+WRy7ywtn+lKi6Z5RYAuo53y3LjdTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\DaoTests\\DaoTests.csproj",
+  "projectFilePath": "D:\\work\\Notes\\DaoTests\\DaoTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.11\\microsoft.aspnetcore.authorization.7.0.11.nupkg.sha512",
     "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.11\\microsoft.aspnetcore.components.7.0.11.nupkg.sha512",

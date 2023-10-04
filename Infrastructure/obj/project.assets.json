@@ -1048,11 +1048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\obj\\",
+      "outputPath": "D:\\work\\Notes\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1074,8 +1074,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj": {
-              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj"
+            "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj": {
+              "projectPath": "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj"
             }
           }
         }

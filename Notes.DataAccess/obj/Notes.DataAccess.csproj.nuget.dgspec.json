@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.DataAccess\\Notes.DataAccess.csproj": {}
+    "D:\\work\\Notes\\Notes.DataAccess\\Notes.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj": {
+    "D:\\work\\Notes\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\work\\Notes\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj",
+        "projectPath": "D:\\work\\Notes\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\obj\\",
+        "outputPath": "D:\\work\\Notes\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj"
+              "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -94,14 +94,14 @@
         }
       }
     },
-    "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\obj\\",
+        "outputPath": "D:\\work\\Notes\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -123,8 +123,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj": {
-                "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj"
+              "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj": {
+                "projectPath": "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj"
               }
             }
           }
@@ -170,14 +170,14 @@
         }
       }
     },
-    "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.DataAccess\\Notes.DataAccess.csproj": {
+    "D:\\work\\Notes\\Notes.DataAccess\\Notes.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.DataAccess\\Notes.DataAccess.csproj",
+        "projectUniqueName": "D:\\work\\Notes\\Notes.DataAccess\\Notes.DataAccess.csproj",
         "projectName": "Notes.DataAccess",
-        "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.DataAccess\\Notes.DataAccess.csproj",
+        "projectPath": "D:\\work\\Notes\\Notes.DataAccess\\Notes.DataAccess.csproj",
         "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.DataAccess\\obj\\",
+        "outputPath": "D:\\work\\Notes\\Notes.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -199,11 +199,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj"
+              "D:\\work\\Notes\\Common\\Common.csproj": {
+                "projectPath": "D:\\work\\Notes\\Common\\Common.csproj"
               },
-              "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj": {
-                "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj"
+              "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj": {
+                "projectPath": "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj"
               }
             }
           }
@@ -237,14 +237,14 @@
         }
       }
     },
-    "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj": {
+    "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj",
+        "projectUniqueName": "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj",
         "projectName": "Notes.Domain",
-        "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj",
+        "projectPath": "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj",
         "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\obj\\",
+        "outputPath": "D:\\work\\Notes\\Notes.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

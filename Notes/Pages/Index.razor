@@ -1,0 +1,285 @@
+﻿@page "/"
+@using Common.DTOs;
+@using Microsoft.AspNetCore.SignalR.Client;
+@using Notes.Core.DTOs;
+@using Notes.Core.Interfaces;
+@using Notes.Core.Services;
+@using Radzen;
+@using Web.Components;
+
+@inject NavigationManager Navigation
+@inject INotesService NotesService
+@inject DialogService DialogService
+@inject Notes.Core.Interfaces.INotesService NoteService;
+@implements IDisposable;
+
+ <link href="css/notes-main.css" rel="stylesheet" />
+
+<PageTitle>4Notes</PageTitle>
+<div class="page-layout">
+    <a>Total Notes: @notes.TotalCount </a>
+    @if (notes.Result != null)
+    {
+        @foreach (var note in notes?.Result)
+        {
+            <RadzenCard class="note-row" Variant="Variant.Filled">
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.SpaceBetween">
+                    <div style="width: 200px">
+                        <RadzenText TextStyle="TextStyle.Body1"><b>@(note.Title)</b></RadzenText>
+                    </div>
+                    <div style="width: 200px">
+                        <RadzenText TextStyle="TextStyle.Overline" class="rz-display-flex rz-mt-4 rz-mb-0">
+                            @if(note.AddedDateTime.Year == DateTime.UtcNow.Year &&
+                                note.AddedDateTime.Month == DateTime.UtcNow.Month &&
+                               note.AddedDateTime.Day == DateTime.UtcNow.Day)
+                            {
+                                <a>Created today</a>
+                            } else {
+                                 <a>Created @GetDaysAgoFromDate(note.AddedDateTime) days ago)</a>
+                             }
+                             </RadzenText>
+                    </div>
+                    <div>
+                        <RadzenButton Click=@(async () => await OpenSideDialog(note)) Style="margin-right: 10px" Text=@($"View Note") ButtonStyle="ButtonStyle.Light" />
+                        <RadzenButton Click=@(async () => await OpenUpdateDialog(note)) Text=@($"Edit Note") ButtonStyle="ButtonStyle.Primary" />
+                    </div>
+                </RadzenStack>
+            </RadzenCard>
+        }
+
+        <RadzenPager Density="Density.Default"
+                     HorizontalAlign="HorizontalAlign.Center"
+                     Count="@notes.TotalCount"
+                     PageSize="@GetPageSize()"
+                     PageNumbersCount="@(GetPageCount() > @maxDisplayPageCount ? @maxDisplayPageCount : GetPageCount())"
+                     PageChanged="@PageChanged" />
+
+    }
+    <footer id="footer" class="rz-background-color-primary-dark">
+        <b>@footer</b>
+    </footer>
+</div>
+
+@code {
+    private PaginationResult<NoteDTO> notes = new PaginationResult<NoteDTO>();
+    private NoteDTO updateNote = new NoteDTO();
+    private dynamic UpdateDialog;
+    private bool closeDialogOnOverlayClick = true;
+    private HubConnection? hubConnection;
+    private Variant variant = Variant.Outlined;
+    private DialogPosition position = DialogPosition.Left;
+    private bool showMask = true;
+    [Inject] private NotifyStateService? service { get; set; }
+    private NotifyStateService NotifyService => service!;
+    private FiltersRequest LastFilterRequest = new FiltersRequest();
+    int offset = 0;
+    int limit = 5;
+    const int maxDisplayPageCount = 7;
+    string footer = "4Notes: anonymous notes sharing";
+    string notesHubEndpoint = "/noteshub";
+    string hubReceiveMethod = "ReceiveNotesUpdates";
+    string hubSendMethod = "SendNotesUpdates";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            notes = await NotesService.GetPaginated(new Pagination<NoteDTO>() { Offset = offset, Limit = limit });
+            this.NotifyService.EventNoteAdd += async (s, e) => await this.GetPaginated(s, e);
+            hubConnection = new HubConnectionBuilder()
+                .WithUrl(Navigation.ToAbsoluteUri(notesHubEndpoint))
+                .Build();
+            hubConnection.On(hubReceiveMethod, async () =>
+            {
+                await GetPaginated(this, new FiltersRequest()
+                        {
+                            BodyKeyWordFilter = LastFilterRequest.BodyKeyWordFilter,
+                            CreatedAtFilter = LastFilterRequest.CreatedAtFilter,
+                            TitleFilter = LastFilterRequest.TitleFilter
+                        });
+                StateHasChanged();
+            });
+            await hubConnection.StartAsync();
+            StateHasChanged();
+        }
+    }
+
+    private async Task OpenUpdateDialog(NoteDTO editNote)
+    {
+        updateNote = new NoteDTO()
+        {
+            Title = editNote.Title,
+            Body = editNote.Body,
+            Id = editNote.Id
+        };
+        UpdateDialog = await DialogService.OpenAsync("Edit Note", ds =>
+            @<div>
+                <RadzenTemplateForm TItem="NoteDTO" Data=@updateNote Submit=@UpdateNote>
+                    <RadzenStack Gap="1rem" Class="rz-p-sm-12">
+                        <RadzenFormField Text="Title" Variant="@variant">
+                            <ChildContent>
+                                <RadzenTextBox Name="Title" @bind-Value=@updateNote.Title />
+                            </ChildContent>
+                            <Helper>
+                                <RadzenRequiredValidator Component="Title" Text="Title is required." />
+                            </Helper>
+                        </RadzenFormField>
+                        <RadzenFormField Text="Note Content" Variant="@variant">
+                            <ChildContent>
+                                <RadzenTextArea Name="Body" @bind-Value=@updateNote.Body class="w-100" />
+                            </ChildContent>
+                            <Helper>
+                                <small>(maximum 5000 characters)</small>
+                                <RadzenLengthValidator Component="Body" Max="5000"
+                                               Text="Body should be 5000 characters or less" />
+                            </Helper>
+                        </RadzenFormField>
+                        <div style="display: flex; flex-direction: row; margin-top: 25px; justify-content: center">
+                            <RadzenButton ButtonType="ButtonType.Submit" Style="margin-right: 10px"
+                                          Text=@($"Update") ButtonStyle="ButtonStyle.Primary" />
+                            <RadzenButton Click="@CancelUpdate" Text=@($"Cancel") ButtonStyle="ButtonStyle.Secondary" />
+                        </div>
+                    </RadzenStack>
+                </RadzenTemplateForm>
+        </div>
+      );
+    }
+
+    private async Task UpdateNote()
+    {
+        const int maxBody = 5000;
+        if (string.IsNullOrEmpty(updateNote.Title) || updateNote.Body.Length > maxBody)
+        {
+            CancelUpdate();
+            await Task.CompletedTask;
+        }
+        await NoteService.UpdateNote(updateNote);
+
+        await GetPaginated(this, new FiltersRequest()
+        {
+            BodyKeyWordFilter = LastFilterRequest.BodyKeyWordFilter,
+            CreatedAtFilter = LastFilterRequest.CreatedAtFilter,
+            TitleFilter = LastFilterRequest.TitleFilter,
+        });
+
+        if (hubConnection is not null)
+        {
+            await hubConnection.SendAsync(hubSendMethod);
+        }
+        CancelUpdate();
+    }
+
+    private void CancelUpdate()
+    {
+        updateNote.Title = "";
+        updateNote.Body = "";
+        DialogService.Close(UpdateDialog);
+    }
+
+    private void CancelUpdate(object sender, EventArgs eventArgs)
+    {
+        updateNote.Title = "";
+        updateNote.Body = "";
+        DialogService.Close(UpdateDialog);
+    }
+
+    public async void Dispose()
+    {
+        this.NotifyService.EventNoteAdd -= async (s, e) => await this.GetPaginated(s, e);
+    }
+
+    private async Task PageChanged(PagerEventArgs args)
+    {
+        if (notes.TotalCount < limit)
+        {
+            return;
+        }
+        offset = args.Skip;
+        limit = args.Top;
+        await GetPaginated(this, new FiltersRequest()
+        {
+            BodyKeyWordFilter = LastFilterRequest.BodyKeyWordFilter,
+            CreatedAtFilter = LastFilterRequest.CreatedAtFilter,
+            TitleFilter = LastFilterRequest.TitleFilter,
+        });
+
+    }
+
+    private int GetPageSize()
+    {
+        if (notes.TotalCount < limit)
+        {
+            return notes.TotalCount;
+        }
+
+        return limit;
+    }
+
+    private int GetPageCount()
+    {
+        if (notes.TotalCount < limit)
+        {
+            return 1;
+        }
+        int pages = notes.TotalCount / limit;
+        if (notes.TotalCount % limit != 0)
+        {
+            pages++;
+        }
+        return pages;
+    }
+
+    private async Task GetPaginated(object? sender, FiltersRequest filters)
+    {
+        LastFilterRequest.BodyKeyWordFilter = filters.BodyKeyWordFilter;
+        LastFilterRequest.CreatedAtFilter = filters.CreatedAtFilter;
+        LastFilterRequest.TitleFilter = filters.TitleFilter;
+        await InvokeAsync(async() =>
+        {
+            notes = await NotesService.GetPaginated(new Pagination<NoteDTO>()
+                {
+                    Offset = offset,
+                    Limit = limit,
+                    BodyKeyWordFilter = filters.BodyKeyWordFilter,
+                    TitleFilter = filters.TitleFilter,
+                    CreatedAtFilter = filters.CreatedAtFilter
+                });
+            StateHasChanged();
+        });
+          
+    }
+
+    private bool IsConnected =>
+       hubConnection?.State == HubConnectionState.Connected;
+
+    private async ValueTask DisposeAsync()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+
+    private async Task OpenSideDialog(NoteDTO note )
+    {
+        var daysAgo = GetDaysAgoFromDate(note.AddedDateTime);
+        await DialogService.OpenSideAsync<NoteDetails>(note.Title, options: new SideDialogOptions
+        { CloseDialogOnOverlayClick = true, 
+            Position = position, 
+            ShowMask = showMask },
+            parameters: new Dictionary<string, object>()
+            {
+                { "CreatedAt", note.AddedDateTime },
+                { "Content", note.Body },
+                { "DaysAgo" , daysAgo }
+            });
+    }
+
+    private int GetDaysAgoFromDate(DateTime createdAt)
+    {
+        var now = DateTime.UtcNow;
+        var diff = now - createdAt;
+        return diff.Days;
+    }
+
+}

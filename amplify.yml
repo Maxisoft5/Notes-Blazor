@@ -3,9 +3,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install -g @aws-amplify/cli
-        - amplify configure
-        - amplify init
         - curl -sSL https://dot.net/v1/dotnet-install.sh > dotnet-install.sh
         - chmod +x *.sh
         - ./dotnet-install.sh -c 7.0 -InstallDir ./dotnet7

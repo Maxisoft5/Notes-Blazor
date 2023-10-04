@@ -9,3 +9,14 @@ C:\Users\Maksym\Documents\GitHub\backend\4Notes-Blazor\Notes\Notes.Domain\obj\Re
 C:\Users\Maksym\Documents\GitHub\backend\4Notes-Blazor\Notes\Notes.Domain\obj\Release\net7.0\refint\Notes.Domain.dll
 C:\Users\Maksym\Documents\GitHub\backend\4Notes-Blazor\Notes\Notes.Domain\obj\Release\net7.0\Notes.Domain.pdb
 C:\Users\Maksym\Documents\GitHub\backend\4Notes-Blazor\Notes\Notes.Domain\obj\Release\net7.0\ref\Notes.Domain.dll
+D:\work\Notes\Notes.Domain\bin\Release\net7.0\Notes.Domain.deps.json
+D:\work\Notes\Notes.Domain\bin\Release\net7.0\Notes.Domain.dll
+D:\work\Notes\Notes.Domain\bin\Release\net7.0\Notes.Domain.pdb
+D:\work\Notes\Notes.Domain\obj\Release\net7.0\Notes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\work\Notes\Notes.Domain\obj\Release\net7.0\Notes.Domain.AssemblyInfoInputs.cache
+D:\work\Notes\Notes.Domain\obj\Release\net7.0\Notes.Domain.AssemblyInfo.cs
+D:\work\Notes\Notes.Domain\obj\Release\net7.0\Notes.Domain.csproj.CoreCompileInputs.cache
+D:\work\Notes\Notes.Domain\obj\Release\net7.0\Notes.Domain.dll
+D:\work\Notes\Notes.Domain\obj\Release\net7.0\refint\Notes.Domain.dll
+D:\work\Notes\Notes.Domain\obj\Release\net7.0\Notes.Domain.pdb
+D:\work\Notes\Notes.Domain\obj\Release\net7.0\ref\Notes.Domain.dll

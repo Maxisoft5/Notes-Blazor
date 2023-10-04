@@ -1,0 +1,8 @@
+{
+  "Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\work\\Notes\\Common",
+  "Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\work\\Notes\\Infrastructure",
+  "Notes.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\work\\Notes\\Notes.Core",
+  "Notes.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\work\\Notes\\Notes.DataAccess",
+  "Notes.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\work\\Notes\\Notes.Domain",
+  "Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\work\\Notes\\Notes"
+}

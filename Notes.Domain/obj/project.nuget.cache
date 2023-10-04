@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aGcat5eSDvvsg5nQ6ZwSMtn/Xxamane25LYcJQezhT9wOuzXdxQ465I2XXVBQiRNh+lPaCboTuwvYVHg3Gu8Jg==",
+  "dgSpecHash": "TdFxQ7lRGBYV9e12ZLTf35RBbhQUNeDN1OI/Vy+TEApkR46VoA50hLXT30yrQIpgkF3GHjlP2XA2obvKFNcFfA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj",
+  "projectFilePath": "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

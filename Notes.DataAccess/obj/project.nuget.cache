@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TGCqdgj8lqKzoEb/MKreKje66QLGKUpO0HU242//i6Fc3QfwqtzoJwYPN89Nle0KhI5ZEMisx9vs7kDolRP9eA==",
+  "dgSpecHash": "N8kpyWSuPfePgidu3HJrK+GwYCS+T5Vt87tK00V79RBXY+QACZIqh3groeETC+4xt4eYrCaZKdxR/j+C6NUVVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.DataAccess\\Notes.DataAccess.csproj",
+  "projectFilePath": "D:\\work\\Notes\\Notes.DataAccess\\Notes.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.11\\microsoft.aspnetcore.authorization.7.0.11.nupkg.sha512",
     "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.11\\microsoft.aspnetcore.components.7.0.11.nupkg.sha512",

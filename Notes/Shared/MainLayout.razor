@@ -1,0 +1,203 @@
+﻿@using Microsoft.AspNetCore.SignalR.Client;
+@using Notes.Core.DTOs;
+@using Notes.Core.Interfaces;
+@using Notes.Core.Services;
+@using Radzen;
+@using System.ComponentModel.DataAnnotations;
+
+@inherits LayoutComponentBase
+@inject DialogService DialogService
+@inject Notes.Core.Interfaces.INotesService NoteService;
+@inject NotifyStateService NotifyService;
+@inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
+
+
+<PageTitle>4Notes</PageTitle>
+<RadzenDialog />
+<RadzenPager />
+
+<link href="css/site.css" rel="stylesheet" />
+<div class="page">
+    <main>
+        <div class="top-row px-4 row-space-between">
+            <RadzenButton Text=@($"New Note") ButtonStyle="ButtonStyle.Primary" Click=@OpenNewNoteDialog />
+            <div class="row-space-between">
+                <RadzenDatePicker Change=@CheckChanged DateFormat="dd.MM.yyyy" DateRender=@DateRender
+                        class="nav-date-pick" @bind-Value=@filterDate />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span @onclick="async () => await SearchWithFilters()" class="input-group-text searchBtw" id="basic-addon1">
+                            <svg width="24" height="27" fill="none" viewBox="0 0 24 27">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                                stroke-width="1.5" d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <input @onkeydown="@Enter" @bind="SearchNoteWord" type="text" class="form-control" placeholder="Enter search word" aria-label="Search note" aria-describedby="basic-addon1">
+                </div>
+                <div class="btn-group" style="margin-right:80px; margin-left: 20px">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+                        aria-expanded="false">
+                        Filter by
+                    </button>
+                    <div @onclick="CheckChanged" @ref=RefToFilterType class="dropdown-menu">
+                        <a class="dropdown-item active">Title</a>
+                        <a class="dropdown-item">Note content</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/main-layout.js"></script>
+
+@code {
+    private NoteDTO createNote = new NoteDTO();
+    private dynamic CreateDialog;
+    private string SearchNoteWord;
+    private ElementReference RefToFilterType;
+    private DateTime? filterDate;
+    private Variant variant = Variant.Outlined;
+    private HubConnection? hubConnection;
+    string hubReceiveMethod = "ReceiveNotesUpdates";
+    string notesHubEndpoint = "/noteshub";
+    string hubSendMethod = "SendNotesUpdates";
+    string getActiveFilterTypeFunction = "getActiveFilterType";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            hubConnection = new HubConnectionBuilder()
+                  .WithUrl(Navigation.ToAbsoluteUri(notesHubEndpoint))
+                  .Build();
+            hubConnection.On(hubReceiveMethod, async () =>
+            {
+                var filters = await GetFilters();
+                NotifyService.NotifyAddNoteEvent(this, filters);
+            });
+            await hubConnection.StartAsync();
+        }
+    }
+
+    private async Task OpenNewNoteDialog()
+    {
+        CreateDialog = await DialogService.OpenAsync("New Note", ds =>
+            @<div>
+                <RadzenTemplateForm TItem="NoteDTO" Data=@createNote Submit=@AddNote>
+                     <RadzenStack Gap="1rem" Class="rz-p-sm-12">
+                        <RadzenFormField Text="Title" Variant="@variant">
+                            <ChildContent>
+                                <RadzenTextBox Name="Title" @bind-Value=@createNote.Title />
+                            </ChildContent>
+                            <Helper>
+                                <RadzenRequiredValidator Component="Title" Text="Title is required." />
+                            </Helper>
+                        </RadzenFormField>
+                        <RadzenFormField Text="Note Content" Variant="@variant">
+                            <ChildContent>
+                                <RadzenTextArea Name="Body" @bind-Value=@createNote.Body class="w-100" />
+                            </ChildContent>
+                            <Helper>
+                                <small>(maximum 5000 characters)</small>
+                                <RadzenLengthValidator Component="Body" Max="5000"
+                                                       Text="Body should be 5000 characters or less" />
+                            </Helper>
+                        </RadzenFormField>
+
+                        <div style="display: flex; flex-direction: row; margin-top: 25px; justify-content: center">
+                            <RadzenButton ButtonType="ButtonType.Submit" Style="margin-right: 10px" 
+                                Text=@($"Submit") ButtonStyle="ButtonStyle.Primary" />
+                            <RadzenButton Click="@CancelCreate" Text=@($"Cancel") ButtonStyle="ButtonStyle.Secondary" />
+                        </div>
+                    </RadzenStack>
+                </RadzenTemplateForm>
+        </div>
+    );
+    }
+
+    private async void CheckChanged()
+    {
+        var filters = await GetFilters();
+        NotifyService.NotifyAddNoteEvent(this, filters);
+    }
+
+    private void DateRender(DateRenderEventArgs args)
+    {
+        args.Disabled = args.Date > DateTime.UtcNow;
+    }
+
+    private void CancelCreate()
+    {
+        DialogService.Close(CreateDialog);
+        createNote.Title = "";
+        createNote.Body = "";
+    }
+
+    private void CancelCreate(object sender, EventArgs args)
+    {
+        DialogService.Close(CreateDialog);
+        createNote.Title = "";
+        createNote.Body = "";
+    }
+
+    private async void Enter()
+    {
+        var filters = await GetFilters();
+        NotifyService.NotifyAddNoteEvent(this, filters);
+    }
+
+    private async Task AddNote()
+    {
+        const int maxBody = 5000;
+        if (string.IsNullOrEmpty(createNote.Title) || createNote.Body.Length > maxBody)
+        {
+            CancelCreate();
+            await Task.CompletedTask;
+        }
+        await NoteService.AddNew(new Notes.Core.DTOs.NoteDTO()
+        {
+            Title = createNote.Title,
+            Body = createNote.Body ?? ""
+        });
+        var filters = await GetFilters();
+
+        NotifyService.NotifyAddNoteEvent(this, filters);
+        if (hubConnection is not null)
+        {
+            await hubConnection.SendAsync(hubSendMethod);
+        }
+        CancelCreate();
+    }
+
+    private async Task SearchWithFilters()
+    {
+        var filters = await GetFilters();
+        NotifyService.NotifyAddNoteEvent(this, filters);
+    }
+
+    private async Task<Common.DTOs.FiltersRequest> GetFilters()
+    {
+        var filters = new Common.DTOs.FiltersRequest();
+        string filterType = await JSRuntime.InvokeAsync<string>(getActiveFilterTypeFunction);
+        if (filterType == "Title")
+        {
+            filters.TitleFilter = SearchNoteWord;
+        }
+        if (filterType == "Note content")
+        {
+            filters.BodyKeyWordFilter = SearchNoteWord;
+        }
+        if (filterDate.HasValue)
+        {
+            filters.CreatedAtFilter = filterDate;
+        }
+        return filters;
+
+    }
+}
