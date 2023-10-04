@@ -1,8 +1,0 @@
-{
-  "Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\Documents\\GitHub\\backend\\4Notes-Blazor\\Notes\\Common",
-  "Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\Documents\\GitHub\\backend\\4Notes-Blazor\\Notes\\Infrastructure",
-  "Notes.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\Documents\\GitHub\\backend\\4Notes-Blazor\\Notes\\Notes.Core",
-  "Notes.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\Documents\\GitHub\\backend\\4Notes-Blazor\\Notes\\Notes.DataAccess",
-  "Notes.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\Documents\\GitHub\\backend\\4Notes-Blazor\\Notes\\Notes.Domain",
-  "Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Maksym\\Documents\\GitHub\\backend\\4Notes-Blazor\\Notes\\Notes"
-}
