@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "hbyPC5SLzlnD58evE1Qi4Ttlgc+JEIvrQVJm0w85yqwIchX41qSuir0nBNc53Xs8wgoItOK9qRjCI9FS0oJeuA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\backend\\4Notes-Blazor\\Notes\\Notes.DataAccess\\Notes.DataAccess.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.11\\microsoft.aspnetcore.authorization.7.0.11.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.11\\microsoft.aspnetcore.components.7.0.11.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.11\\microsoft.aspnetcore.components.analyzers.7.0.11.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.11\\microsoft.aspnetcore.metadata.7.0.11.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.11\\microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.11\\microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
+    "C:\\Users\\Maksym\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
