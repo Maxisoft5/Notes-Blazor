@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w9lDTOm/SrZk1Sgl/0JmsWcfLTH+Wkyrq0wmuT6h5npGCdZ/xIOcjPBYTVv9DjLHHHWmzXQ8WOZxmUDM6mObrA==",
+  "dgSpecHash": "LZvn3VtjzBEkTyGuz99QfyDYjSgPJEC+BScOED2PD91nocCWf6dyQTBl1FtitQmvIlLqTEMdpvw/OGHHFgouXg==",
   "success": true,
-  "projectFilePath": "D:\\work\\Notes\\Common\\Common.csproj",
+  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.11\\microsoft.aspnetcore.authorization.7.0.11.nupkg.sha512",
     "C:\\Users\\Maksym\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.11\\microsoft.aspnetcore.components.7.0.11.nupkg.sha512",

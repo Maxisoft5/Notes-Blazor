@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l9H5oi2fMnkom2tl3MDyf9BHGmIZs1VthTCEpnx0adR+LE7Udsk5OBtxrWaIqsfTXy7wih37uzmUC+EKGTw2tw==",
+  "dgSpecHash": "KorJSGb5VdeYWqmbykvyWM+iR81FCGusPmAFJ4x6D5z1/2MPbqamB9DDIg0+JEZQs5DPqOVBTQuxz/M7Iak0pA==",
   "success": true,
-  "projectFilePath": "D:\\work\\Notes\\NotesModuleTests\\NotesModuleTests.csproj",
+  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\NotesModuleTests\\NotesModuleTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maksym\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Maksym\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

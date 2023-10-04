@@ -1019,11 +1019,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\Notes\\Notes.Core\\Notes.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Core\\Notes.Core.csproj",
       "projectName": "Notes.Core",
-      "projectPath": "D:\\work\\Notes\\Notes.Core\\Notes.Core.csproj",
+      "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Core\\Notes.Core.csproj",
       "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\Notes\\Notes.Core\\obj\\",
+      "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1045,14 +1045,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\work\\Notes\\Common\\Common.csproj": {
-              "projectPath": "D:\\work\\Notes\\Common\\Common.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj"
             },
-            "D:\\work\\Notes\\Notes.DataAccess\\Notes.DataAccess.csproj": {
-              "projectPath": "D:\\work\\Notes\\Notes.DataAccess\\Notes.DataAccess.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.DataAccess\\Notes.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.DataAccess\\Notes.DataAccess.csproj"
             },
-            "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj": {
-              "projectPath": "D:\\work\\Notes\\Notes.Domain\\Notes.Domain.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Domain\\Notes.Domain.csproj"
             }
           }
         }

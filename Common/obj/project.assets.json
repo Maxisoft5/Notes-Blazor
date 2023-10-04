@@ -841,11 +841,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\Notes\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "D:\\work\\Notes\\Common\\Common.csproj",
+      "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj",
       "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\Notes\\Common\\obj\\",
+      "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -867,8 +867,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

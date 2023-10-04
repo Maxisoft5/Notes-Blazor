@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aWjr+snpwttCCXbVZ/dSuS4XiHzqfjEvmmWoXRdPIkZrTkB14JA0rRSZJF0o1/7YsFje7P1Fs1XYYVTkAQhLcQ==",
+  "dgSpecHash": "VwtSY+d8FMkF8R40xxNvtzoKWDlhPn7EIIwHr+oPdbcADb2d3bWNhhYJJeZqvZiZ7sdHQ1KI8ocJfZAcwoJybQ==",
   "success": true,
-  "projectFilePath": "D:\\work\\Notes\\IntegrationTests\\IntegrationTests.csproj",
+  "projectFilePath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\IntegrationTests\\IntegrationTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maksym\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Maksym\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

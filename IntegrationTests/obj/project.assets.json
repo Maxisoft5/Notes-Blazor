@@ -9217,11 +9217,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\Notes\\IntegrationTests\\IntegrationTests.csproj",
+      "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\IntegrationTests\\IntegrationTests.csproj",
       "projectName": "IntegrationTests",
-      "projectPath": "D:\\work\\Notes\\IntegrationTests\\IntegrationTests.csproj",
+      "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\IntegrationTests\\IntegrationTests.csproj",
       "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\Notes\\IntegrationTests\\obj\\",
+      "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\IntegrationTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9243,17 +9243,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\work\\Notes\\Common\\Common.csproj": {
-              "projectPath": "D:\\work\\Notes\\Common\\Common.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj"
             },
-            "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\work\\Notes\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Infrastructure\\Infrastructure.csproj"
             },
-            "D:\\work\\Notes\\Notes.Core\\Notes.Core.csproj": {
-              "projectPath": "D:\\work\\Notes\\Notes.Core\\Notes.Core.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Core\\Notes.Core.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Core\\Notes.Core.csproj"
             },
-            "D:\\work\\Notes\\Notes\\Web.csproj": {
-              "projectPath": "D:\\work\\Notes\\Notes\\Web.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\Web.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes\\Web.csproj"
             }
           }
         }

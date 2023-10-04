@@ -6551,11 +6551,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\Notes\\Common.Tests\\Common.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common.Tests\\Common.Tests.csproj",
       "projectName": "Common.Tests",
-      "projectPath": "D:\\work\\Notes\\Common.Tests\\Common.Tests.csproj",
+      "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common.Tests\\Common.Tests.csproj",
       "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\Notes\\Common.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6577,8 +6577,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\work\\Notes\\Common\\Common.csproj": {
-              "projectPath": "D:\\work\\Notes\\Common\\Common.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Common\\Common.csproj"
             }
           }
         }

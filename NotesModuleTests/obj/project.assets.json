@@ -6747,11 +6747,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\Notes\\NotesModuleTests\\NotesModuleTests.csproj",
+      "projectUniqueName": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\NotesModuleTests\\NotesModuleTests.csproj",
       "projectName": "NotesModuleTests",
-      "projectPath": "D:\\work\\Notes\\NotesModuleTests\\NotesModuleTests.csproj",
+      "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\NotesModuleTests\\NotesModuleTests.csproj",
       "packagesPath": "C:\\Users\\Maksym\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\Notes\\NotesModuleTests\\obj\\",
+      "outputPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\NotesModuleTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6773,11 +6773,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\work\\Notes\\DaoTests\\DaoTests.csproj": {
-              "projectPath": "D:\\work\\Notes\\DaoTests\\DaoTests.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\DaoTests\\DaoTests.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\DaoTests\\DaoTests.csproj"
             },
-            "D:\\work\\Notes\\Notes.Core\\Notes.Core.csproj": {
-              "projectPath": "D:\\work\\Notes\\Notes.Core\\Notes.Core.csproj"
+            "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Core\\Notes.Core.csproj": {
+              "projectPath": "C:\\Users\\Maksym\\Documents\\GitHub\\Notes-Blazor\\Notes.Core\\Notes.Core.csproj"
             }
           }
         }
