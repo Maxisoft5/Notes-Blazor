@@ -24,4 +24,5 @@ jobs:
         GITHUB_TOKEN: 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
         BRANCH: gh-pages
         FOLDER: release/wwwroot
-  
+    - name: Change base-tag in index.html from / to Notes-Blazor
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Notes-Blazor\/Notes\/" \/>/g' release/wwwroot/index.html
