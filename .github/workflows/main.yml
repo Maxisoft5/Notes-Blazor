@@ -19,7 +19,7 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish Notes/Web.csproj -c Release -o release --nologo
     - name: Change base-tag in index.html from / to Notes-Blazor
-      run: sed -i 's/<base href="\/" \/>/<base href="\/Notes-Blazor\/Notes\/" \/>/g' release/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Notes-Blazor\/" \/>/g' release/wwwroot/index.html
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
